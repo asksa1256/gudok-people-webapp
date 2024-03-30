@@ -20,6 +20,7 @@ Visual Studio Code (VS Code)
 
 ### `git 연동`
 
+0. git 설치: https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-Git-%EC%84%A4%EC%B9%98
 1. vs code 터미널에 git init 입력
 2. git remote add origin https://github.com/asksa1256/gudok-people-webapp.git 
 3. git clone https://github.com/asksa1256/gudok-people-webapp.git 
