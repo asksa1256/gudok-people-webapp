@@ -42,7 +42,7 @@ app.post('/signup', async function(req, res) {
     const password = req.body.password;
     const nickname = req.body.nickname; // 추가된 부분: 닉네임 추출
     try {
-        // MongoDB에 사용자 추가
+        // MongoDB에 사용자 추가asdasd
         const existingUser = await usersCollection.findOne({ username });
         if (existingUser) {
             res.status(400).send('Username already exists');
