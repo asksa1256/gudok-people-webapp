@@ -1,5 +1,9 @@
 # 구독의 민족 | Web App 
 
+## `작업하기 전에 꼭 풀(pull) 먼저 받고 시작해주세요!`
+
++ vs code 터미널에 git pull origin master
+
 ## 개발 언어
 
 + 화면
