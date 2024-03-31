@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const middleware = require("node-sass-middleware");
 const bodyParser = require("body-parser");
 const { MongoClient, ServerApiVersion } = require("mongodb");
 
@@ -29,16 +28,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.listen(8080, function () {
   console.log("listening on 8080");
 });
-
-// SCSS 파일이 위치한 디렉토리 설정
-app.use(
-  middleware({
-    src: path.join(__dirname, "public"),
-    dest: path.join(__dirname, "public"),
-    indentedSyntax: false, // true면 .sass 파일도 컴파일됩니다.
-    sourceMap: true,
-  })
-);
 
 // 정적 파일 디렉토리 설정
 app.use(express.static(path.join(__dirname, "public")));
