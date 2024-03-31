@@ -11,7 +11,7 @@
   - CSS
   - JavaScript
 + 서버
-  - Node.js
+  - Node.js (+ express.js 라이브러리 사용)
 
 + 데이터베이스
   - mongoDB (연동 예정)
