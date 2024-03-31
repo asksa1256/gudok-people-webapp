@@ -1,125 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Form Prototype</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-  /* Additional styles if needed */
-  .custom-button {
-    width: 120px; /* 중복 확인 버튼의 너비를 조정합니다. */
-    height: 40px; /* 중복 확인 버튼의 높이를 조정합니다. */
-    /* 기타 스타일 */
-    background-color: #ccc;
-    border: none;
-    border-radius: 5px;
-    margin-left: -1px; /* 버튼과 입력란 사이의 간격을 조정합니다. */
-  }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Prototype</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Additional styles if needed */
+      .custom-button {
+        width: 120px; /* 중복 확인 버튼의 너비를 조정합니다. */
+        height: 40px; /* 중복 확인 버튼의 높이를 조정합니다. */
+        /* 기타 스타일 */
+        background-color: #ccc;
+        border: none;
+        border-radius: 5px;
+        margin-left: -1px; /* 버튼과 입력란 사이의 간격을 조정합니다. */
+      }
 
-  .input-field {
-    width: calc(100% - 120px); /* 입력란의 너비를 계산하여 중복 확인 버튼의 너비와 맞춥니다. */
-    height: 40px; /* 입력란의 높이를 조정합니다. */
-    border: 1px solid #ccc; /* 테두리 추가 */
-    border-radius: 5px;
-    padding: 0 10px; /* 입력란 내부 여백을 조정합니다. */
-  }
+      .input-field {
+        width: calc(
+          100% - 120px
+        ); /* 입력란의 너비를 계산하여 중복 확인 버튼의 너비와 맞춥니다. */
+        height: 40px; /* 입력란의 높이를 조정합니다. */
+        border: 1px solid #ccc; /* 테두리 추가 */
+        border-radius: 5px;
+        padding: 0 10px; /* 입력란 내부 여백을 조정합니다. */
+      }
 
-  .title-text {
-    font-size: 36px; /* 텍스트 크기를 설정합니다. */
-    font-weight: bold; /* 굵은 텍스트로 설정합니다. */
-    margin-bottom: 20px; /* 아래 여백을 추가합니다. */
-    text-align: center; /* 텍스트를 가운데 정렬합니다. */
-  }
-</style>
-</head>
-<body class="bg-white text-gray-800">
-<div class="min-h-screen flex flex-col items-center justify-center">
-    <!-- Main content -->
-    <div class="w-full max-w-md p-4">
-        <h1 class="title text-center text-3xl font-bold text-purple-600 mb-8">구독의 민족</h1>
+      .title-text {
+        font-size: 36px; /* 텍스트 크기를 설정합니다. */
+        font-weight: bold; /* 굵은 텍스트로 설정합니다. */
+        margin-bottom: 20px; /* 아래 여백을 추가합니다. */
+        text-align: center; /* 텍스트를 가운데 정렬합니다. */
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800">
+    <div class="min-h-screen flex flex-col items-center justify-center">
+      <!-- Main content -->
+      <div class="w-full max-w-md p-4">
+        <h1 class="title text-center text-3xl font-bold text-purple-600 mb-8">
+          구독의 민족
+        </h1>
         <div class="mb-6">
-            <label for="id" class="block text-lg font-semibold mb-2">회원가입</label>
-            <div class="relative flex mb-2">
-                <input type="text" id="id" placeholder="아이디" class="input-field border-r-0 rounded-l-lg">
-                <!-- 클래스를 추가하여 스타일을 적용 -->
-                <button class="custom-button bg-gray-400 text-white py-2 px-3 rounded-r-lg" onclick="checkDuplicate('id')">중복확인</button>
-            </div>
-            <div class="relative flex mb-2">
-                <input type="text" id="nickname" placeholder="닉네임" class="input-field border-r-0 rounded-l-lg">
-                <!-- 클래스를 추가하여 스타일을 적용 -->
-                <button class="custom-button bg-gray-400 text-white py-2 px-3 rounded-r-lg" onclick="checkDuplicate('nickname')">중복확인</button>
-            </div>
-            <input type="password" id="password" placeholder="비밀번호" class="w-full p-3 border border-gray-300 rounded mb-2">
-            <input type="password" id="confirm-password" placeholder="비밀번호 확인" class="w-full p-3 border border-gray-300 rounded mb-4">
-            <!-- 회원가입 버튼에 onclick 이벤트 추가 -->
-            <button class="w-full bg-purple-500 text-white py-3 rounded hover:bg-purple-600 transition-colors" onclick="register()">회원가입</button>
+          <label for="id" class="block text-lg font-semibold mb-2"
+            >회원가입</label
+          >
+          <div class="relative flex mb-2">
+            <input
+              type="text"
+              id="id"
+              placeholder="아이디"
+              class="input-field border-r-0 rounded-l-lg"
+            />
+            <button
+              class="custom-button bg-gray-400 text-white py-2 px-3 rounded-r-lg"
+              onclick="checkDuplicate('id')"
+            >
+              중복확인
+            </button>
+          </div>
+          <div class="relative flex mb-2">
+            <input
+              type="text"
+              id="nickname"
+              placeholder="닉네임"
+              class="input-field border-r-0 rounded-l-lg"
+            />
+            <!-- 클래스를 추가하여 스타일을 적용 -->
+            <button
+              class="custom-button bg-gray-400 text-white py-2 px-3 rounded-r-lg"
+              onclick="checkDuplicate('nickname')"
+            >
+              중복확인
+            </button>
+          </div>
+          <input
+            type="password"
+            id="password"
+            placeholder="비밀번호"
+            class="w-full p-3 border border-gray-300 rounded mb-2"
+          />
+          <input
+            type="password"
+            id="confirm-password"
+            placeholder="비밀번호 확인"
+            class="w-full p-3 border border-gray-300 rounded mb-4"
+          />
+          <!-- 회원가입 버튼에 onclick 이벤트 추가 -->
+          <button
+            class="w-full bg-purple-500 text-white py-3 rounded hover:bg-purple-600 transition-colors"
+            onclick="register()"
+          >
+            회원가입
+          </button>
         </div>
+      </div>
     </div>
-</div>
-<script>
-    async function checkDuplicate(fieldId) {
+    <script>
+      async function checkDuplicate(fieldId) {
         const inputField = document.getElementById(fieldId);
         const value = inputField.value.trim(); // 입력값에서 공백을 제거하여 확인합니다.
-        
+
         try {
-            const response = await fetch('/check-duplicate', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ fieldId, value })
-            });
+          const response = await fetch("/check-duplicate", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ fieldId, value }),
+          });
 
-            const data = await response.json();
+          const data = await response.json();
 
-            if (data.isDuplicate) {
-                alert('이미 사용 중인 ' + fieldId);
-            } else {
-                alert('사용 가능한 ' + fieldId);
-            }
+          if (data.isDuplicate) {
+            alert("이미 사용 중인 " + fieldId);
+          } else {
+            alert("사용 가능한 " + fieldId);
+          }
         } catch (error) {
-            console.error('Error checking duplicate:', error);
-            alert('중복 확인 중 오류가 발생했습니다.');
+          console.error("Error checking duplicate:", error);
+          alert("중복 확인 중 오류가 발생했습니다.");
         }
-    }
+      }
 
-    async function register() {
-        const id = document.getElementById('id').value.trim();
-        const nickname = document.getElementById('nickname').value.trim();
-        const password = document.getElementById('password').value.trim();
-        const confirmPassword = document.getElementById('confirm-password').value.trim();
+      async function register() {
+        const id = document.getElementById("id").value.trim();
+        const nickname = document.getElementById("nickname").value.trim();
+        const password = document.getElementById("password").value.trim();
+        const confirmPassword = document
+          .getElementById("confirm-password")
+          .value.trim();
 
         // 여기서 필요한 유효성 검사 등을 수행할 수 있습니다.
         // 이 예시에서는 간단하게 두 비밀번호가 일치하는지만 확인합니다.
         if (password !== confirmPassword) {
-            alert('비밀번호가 일치하지 않습니다.');
-            return;
+          alert("비밀번호가 일치하지 않습니다.");
+          return;
         }
 
         try {
-            const response = await fetch('/register', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ id, nickname, password })
-            });
+          const response = await fetch("/register", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ id, nickname, password }),
+          });
 
-            const data = await response.json();
+          const data = await response.json();
 
-            // 회원가입이 성공적으로 처리되면 모달 팝업을 표시합니다.
-            if (response.ok) {
-                document.querySelector('.bg-white').style.display = 'block';
-            } else {
-                // 회원가입 실패 시 에러 메시지를 표시합니다.
-                alert(data.message);
-            }
+          // 회원가입이 성공적으로 처리되면 모달 팝업을 표시합니다.
+          if (response.ok) {
+            document.querySelector(".bg-white").style.display = "block";
+          } else {
+            // 회원가입 실패 시 에러 메시지를 표시합니다.
+            alert(data.message);
+          }
         } catch (error) {
-            console.error('Error registering:', error);
-            alert('회원가입 중 오류가 발생했습니다.');
+          console.error("Error registering:", error);
+          alert("회원가입 중 오류가 발생했습니다.");
         }
-    }
-</script>
-</body>
+      }
+    </script>
+  </body>
 </html>
