@@ -1,102 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Form Prototype</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      /* Additional styles if needed */
-      .custom-button {
-        width: 120px; /* 중복 확인 버튼의 너비를 조정합니다. */
-        height: 40px; /* 중복 확인 버튼의 높이를 조정합니다. */
-        /* 기타 스타일 */
-        background-color: #ccc;
-        border: none;
-        border-radius: 5px;
-        margin-left: -1px; /* 버튼과 입력란 사이의 간격을 조정합니다. */
-      }
-
-      .input-field {
-        width: calc(
-          100% - 120px
-        ); /* 입력란의 너비를 계산하여 중복 확인 버튼의 너비와 맞춥니다. */
-        height: 40px; /* 입력란의 높이를 조정합니다. */
-        border: 1px solid #ccc; /* 테두리 추가 */
-        border-radius: 5px;
-        padding: 0 10px; /* 입력란 내부 여백을 조정합니다. */
-      }
-
-      .title-text {
-        font-size: 36px; /* 텍스트 크기를 설정합니다. */
-        font-weight: bold; /* 굵은 텍스트로 설정합니다. */
-        margin-bottom: 20px; /* 아래 여백을 추가합니다. */
-        text-align: center; /* 텍스트를 가운데 정렬합니다. */
-      }
-    </style>
+    <title>회원가입 - 구독의 민족</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
-  <body class="bg-white text-gray-800">
-    <div class="min-h-screen flex flex-col items-center justify-center">
-      <!-- Main content -->
-      <div class="w-full max-w-md p-4">
-        <h1 class="title text-center text-3xl font-bold text-purple-600 mb-8">
-          구독의 민족
-        </h1>
-        <div class="mb-6">
-          <label for="id" class="block text-lg font-semibold mb-2"
-            >회원가입</label
-          >
-          <div class="relative flex mb-2">
-            <input
-              type="text"
-              id="id"
-              placeholder="아이디"
-              class="input-field border-r-0 rounded-l-lg"
-            />
-            <button
-              class="custom-button bg-gray-400 text-white py-2 px-3 rounded-r-lg"
-              onclick="checkDuplicate('id')"
-            >
+  <body>
+    <section class="login wrapper">
+      <div class="contents">
+        <nav class="nav-top">
+          <a class="nav-link" href="/">
+            <img src="/images/arrow-back.png" alt="" />
+            로그인
+          </a>
+        </nav>
+        <div class="form-area">
+          <figure class="logo">
+            <img src="/images/logo.svg" alt="구독의 민족" />
+          </figure>
+          <h4 class="title-h4">회원가입</h4>
+          <div class="form-control">
+            <input id="id" type="text" placeholder="아이디" />
+            <button class="btn-sm btn-gray" onclick="checkDuplicate('id')">
               중복확인
             </button>
           </div>
-          <div class="relative flex mb-2">
-            <input
-              type="text"
-              id="nickname"
-              placeholder="닉네임"
-              class="input-field border-r-0 rounded-l-lg"
-            />
-            <!-- 클래스를 추가하여 스타일을 적용 -->
-            <button
-              class="custom-button bg-gray-400 text-white py-2 px-3 rounded-r-lg"
-              onclick="checkDuplicate('nickname')"
-            >
+          <div class="form-control">
+            <input type="text" id="nickname" placeholder="닉네임" />
+            <button class="btn-sm btn-gray" onclick="checkDuplicate('id')">
               중복확인
             </button>
           </div>
-          <input
-            type="password"
-            id="password"
-            placeholder="비밀번호"
-            class="w-full p-3 border border-gray-300 rounded mb-2"
-          />
-          <input
-            type="password"
-            id="confirm-password"
-            placeholder="비밀번호 확인"
-            class="w-full p-3 border border-gray-300 rounded mb-4"
-          />
+          <div class="form-control">
+            <input type="password" id="password" placeholder="비밀번호" />
+          </div>
+          <div class="form-control">
+            <input
+              type="password"
+              id="confirm-password"
+              placeholder="비밀번호 확인"
+            />
+          </div>
           <!-- 회원가입 버튼에 onclick 이벤트 추가 -->
-          <button
-            class="w-full bg-purple-500 text-white py-3 rounded hover:bg-purple-600 transition-colors"
-            onclick="register()"
-          >
-            회원가입
-          </button>
+          <div class="actions">
+            <button class="" onclick="register()">회원가입</button>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
+
     <script>
       async function checkDuplicate(fieldId) {
         const inputField = document.getElementById(fieldId);
