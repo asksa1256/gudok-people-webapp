@@ -33,6 +33,11 @@ body {
   color: #6b6b6b;
   font-size: 16px;
 
+  &:hover,
+  &:focus {
+    color: #ae6cdc;
+  }
+
   &:before {
     content: "";
     position: absolute;
@@ -49,11 +54,26 @@ body {
   }
 }
 
+.nav-link {
+  font-size: 14px;
+  img {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+  }
+  &:hover {
+    color: #000;
+  }
+}
+
 .form-control {
+  position: relative;
   width: 100%;
   margin-bottom: 20px;
 
   input {
+    padding-right: 90px;
+    font-size: 16px;
     &:focus {
       border-color: #ae6cdc;
       &::placeholder {
@@ -61,26 +81,41 @@ body {
       }
     }
   }
+
+  .btn-sm {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+}
+
+.btn {
+  &-sm {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 20px;
+  }
+
+  &-gray {
+    background: #6b6b6b;
+    color: #fff;
+  }
 }
 
 .actions {
   width: 100%;
 }
 
-/* 로그인 */
-.login {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  .contents {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+.wrapper {
 }
 
-.login-form {
+.nav-top {
+}
+
+/* 로그인 */
+.form-area {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,6 +123,7 @@ body {
 
   .logo {
     width: 180px;
+    margin-top: 120px;
   }
 
   h4 {
@@ -96,15 +132,17 @@ body {
     margin: 80px 0 20px;
   }
 
-  .login-btn {
-    width: 100%;
-    margin: 20px 0;
-    padding: 20px;
-    background: #ae6cdc;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 700;
-    border-radius: 40px;
+  .actions {
+    button {
+      width: 100%;
+      margin: 20px 0;
+      padding: 20px;
+      background: #ae6cdc;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      border-radius: 40px;
+    }
   }
 
   .actions + .text-center {

@@ -34,6 +34,9 @@ body {
   color: #6b6b6b;
   font-size: 16px;
 }
+.text-link:hover, .text-link:focus {
+  color: #ae6cdc;
+}
 .text-link:before {
   content: "";
   position: absolute;
@@ -47,9 +50,26 @@ body {
   background: #ae6cdc;
 }
 
+.nav-link {
+  font-size: 14px;
+}
+.nav-link img {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+}
+.nav-link:hover {
+  color: #000;
+}
+
 .form-control {
+  position: relative;
   width: 100%;
   margin-bottom: 20px;
+}
+.form-control input {
+  padding-right: 90px;
+  font-size: 16px;
 }
 .form-control input:focus {
   border-color: #ae6cdc;
@@ -60,38 +80,45 @@ body {
 .form-control input:focus::placeholder {
   color: #000;
 }
+.form-control .btn-sm {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.btn-sm {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 20px;
+}
+.btn-gray {
+  background: #6b6b6b;
+  color: #fff;
+}
 
 .actions {
   width: 100%;
 }
 
 /* 로그인 */
-.login {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.login .contents {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.login-form {
+.form-area {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.login-form .logo {
+.form-area .logo {
   width: 180px;
+  margin-top: 120px;
 }
-.login-form h4 {
+.form-area h4 {
   width: 100%;
   text-align: left;
   margin: 80px 0 20px;
 }
-.login-form .login-btn {
+.form-area .actions button {
   width: 100%;
   margin: 20px 0;
   padding: 20px;
@@ -101,6 +128,6 @@ body {
   font-weight: 700;
   border-radius: 40px;
 }
-.login-form .actions + .text-center {
+.form-area .actions + .text-center {
   margin-top: 40px;
 }
