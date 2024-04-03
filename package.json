@@ -16,5 +16,8 @@
     "mongod": "^2.0.0",
     "mongodb": "^6.5.0",
     "mongoose": "^8.2.4"
+  },
+  "devDependencies": {
+    "node-sass": "npm:sass@^1.72.0"
   }
 }

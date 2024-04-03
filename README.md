@@ -1,5 +1,10 @@
 # 구독의 민족 | Web App 
 
+## `작업하기 전에 꼭 풀(pull) 먼저 받고 시작해주세요!`
+
++ 풀 받기 전에 본인이 작업 중인 파일들(변경사항 있는 파일들)은 따로 백업해놓고 받기 (날아갈 수 있음..)
++ vs code 터미널에 git pull origin master
+
 ## 개발 언어
 
 + 화면
@@ -7,7 +12,7 @@
   - CSS
   - JavaScript
 + 서버
-  - Node.js
+  - Node.js (+ express.js 라이브러리 사용)
 
 + 데이터베이스
   - mongoDB (연동 예정)
