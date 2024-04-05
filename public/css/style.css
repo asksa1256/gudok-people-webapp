@@ -1,16 +1,24 @@
 @charset "UTF-8";
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   background: #f5f5f5;
 }
 
-.contents {
+section {
+  position: relative;
   /* 모바일 크기로 설정 */
   width: 392px;
   height: 852px;
+}
+
+.align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.contents {
+  height: 100%;
   padding: 16px;
   background: #fff;
 }
@@ -22,6 +30,9 @@ body {
 .text-center {
   width: 100%;
   text-align: center;
+}
+.text-center + .text-center {
+  margin-top: 10px;
 }
 
 .text-right {
@@ -51,6 +62,8 @@ body {
 }
 
 .nav-link {
+  display: block;
+  margin-top: 24px;
   font-size: 14px;
 }
 .nav-link img {
@@ -60,6 +73,11 @@ body {
 }
 .nav-link:hover {
   color: #000;
+}
+
+.nav-top {
+  padding: 16px;
+  background: #fff;
 }
 
 .form-control {
@@ -98,11 +116,35 @@ body {
   color: #fff;
 }
 
-.actions {
-  width: 100%;
+.text-btn {
+  font-weight: 700;
+}
+.text-btn-primary {
+  color: #ae6cdc;
 }
 
-/* 로그인 */
+.box {
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+.box + .box {
+  margin-top: 20px;
+}
+.box .box-title-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.box .box-title-wrap .box-title {
+  font-size: 18px;
+  font-weight: 400;
+}
+.box .box-title-wrap .text-btn {
+  font-size: 18px;
+}
+
 .form-area {
   display: flex;
   align-items: center;
@@ -118,6 +160,9 @@ body {
   text-align: left;
   margin: 80px 0 20px;
 }
+.form-area .actions {
+  width: 100%;
+}
 .form-area .actions button {
   width: 100%;
   margin: 20px 0;
@@ -130,4 +175,118 @@ body {
 }
 .form-area .actions + .text-center {
   margin-top: 40px;
+}
+
+.dock-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 24px 24px 46px;
+  background: #fff;
+  border-radius: 24px 24px 0 0;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+  z-index: 9;
+}
+.dock-bar .dock-item {
+  display: inline-flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  width: 74px;
+}
+.dock-bar .dock-item .dock-link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.dock-bar .dock-item .dock-link:hover {
+  color: #000;
+}
+.dock-bar .dock-item .icon {
+  width: 28px;
+}
+.dock-bar .dock-item .text {
+  font-size: 14px;
+}
+
+/* 메인 */
+.logo {
+  width: 96px;
+  margin-bottom: 20px;
+}
+
+.total-price-wrap {
+  text-align: right;
+}
+.total-price-wrap .price {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+.total-price-wrap .won {
+  font-size: 18px;
+  vertical-align: 3px;
+}
+
+.subscr-list {
+  max-height: 330px;
+  overflow: scroll;
+}
+.subscr-list .subscr-list-item {
+  display: flex;
+}
+.subscr-list .subscr-list-item + li {
+  margin-top: 24px;
+}
+.subscr-list .subscr-list-item .icon {
+  flex-shrink: 0;
+  width: 54px;
+  height: 54px;
+  margin-right: 16px;
+}
+.subscr-list .subscr-list-item .icon img {
+  width: 100%;
+}
+.subscr-list .subscr-list-item .name {
+  display: block;
+  margin-top: 2px;
+  font-size: 18px;
+}
+.subscr-list .subscr-list-item .price-wrap {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.subscr-list .subscr-list-item .price-wrap .won {
+  font-size: 16px;
+  margin-left: -2px;
+}
+.subscr-list .subscr-list-item .payment-wrap {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  font-size: 14px;
+}
+.subscr-list .subscr-list-item .payment-wrap .sharing {
+  margin-top: 16px;
+  text-align: right;
+  color: #ae6cdc;
+}
+.subscr-list .subscr-list-item .payment-wrap .sharing img {
+  width: 14px;
+  vertical-align: middle;
+}
+.subscr-list .subscr-list-item .payment-wrap .payment-due {
+  margin-top: auto;
+  margin-left: auto;
+  color: #6b6b6b;
+}
+.subscr-list .subscr-list-item .payment-wrap .payment-due .date {
+  font-weight: 700;
 }

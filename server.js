@@ -32,7 +32,12 @@ app.listen(8080, function () {
 // 정적 파일 디렉토리 설정
 app.use(express.static(path.join(__dirname, "public")));
 
-// 메인 디렉토리: 로그인 페이지
+// 메인 디렉토리
+app.get("/main", function (req, res) {
+  res.sendFile(__dirname + "/mainPage.html");
+});
+
+// 로그인 디렉토리
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/index.html");
 });

@@ -8,48 +8,50 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <section class="login wrapper">
-      <div class="contents">
+    <div class="align-center">
+      <section class="signup">
         <nav class="nav-top">
           <a class="nav-link" href="/">
             <img src="/images/arrow-back.png" alt="" />
             로그인
           </a>
         </nav>
-        <div class="form-area">
-          <figure class="logo">
-            <img src="/images/logo.svg" alt="구독의 민족" />
-          </figure>
-          <h4 class="title-h4">회원가입</h4>
-          <div class="form-control">
-            <input id="id" type="text" placeholder="아이디" />
-            <button class="btn-sm btn-gray" onclick="checkDuplicate('id')">
-              중복확인
-            </button>
-          </div>
-          <div class="form-control">
-            <input type="text" id="nickname" placeholder="닉네임" />
-            <button class="btn-sm btn-gray" onclick="checkDuplicate('id')">
-              중복확인
-            </button>
-          </div>
-          <div class="form-control">
-            <input type="password" id="password" placeholder="비밀번호" />
-          </div>
-          <div class="form-control">
-            <input
-              type="password"
-              id="confirm-password"
-              placeholder="비밀번호 확인"
-            />
-          </div>
-          <!-- 회원가입 버튼에 onclick 이벤트 추가 -->
-          <div class="actions">
-            <button class="" onclick="register()">회원가입</button>
+        <div class="contents">
+          <div class="form-area">
+            <figure class="logo">
+              <img src="/images/logo.svg" alt="구독의 민족" />
+            </figure>
+            <h4 class="title-h4">회원가입</h4>
+            <div class="form-control">
+              <input id="id" type="text" placeholder="아이디" />
+              <button class="btn-sm btn-gray" onclick="checkDuplicate('id')">
+                중복확인
+              </button>
+            </div>
+            <div class="form-control">
+              <input type="text" id="nickname" placeholder="닉네임" />
+              <button class="btn-sm btn-gray" onclick="checkDuplicate('id')">
+                중복확인
+              </button>
+            </div>
+            <div class="form-control">
+              <input type="password" id="password" placeholder="비밀번호" />
+            </div>
+            <div class="form-control">
+              <input
+                type="password"
+                id="confirm-password"
+                placeholder="비밀번호 확인"
+              />
+            </div>
+            <!-- 회원가입 버튼에 onclick 이벤트 추가 -->
+            <div class="actions">
+              <button class="" onclick="register()">회원가입</button>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <script>
       async function checkDuplicate(fieldId) {

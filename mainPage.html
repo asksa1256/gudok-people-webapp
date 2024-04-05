@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>구독의 민족</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="align-center">
+      <section class="main-page">
+        <nav class="nav-top"></nav>
+        <div class="contents">
+          <figure class="logo">
+            <img src="/images/logo.svg" alt="구독의 민족" />
+          </figure>
+          <div class="box">
+            <div class="box-title-wrap">
+              <h5 class="box-title">이번달 총 구독료</h5>
+            </div>
+            <div class="total-price-wrap">
+              <span class="price">47,900</span>
+              <span class="won">원</span>
+            </div>
+          </div>
+          <div class="box">
+            <div class="box-title-wrap">
+              <h5 class="box-title">내 구독 리스트</h5>
+              <button
+                type="button"
+                class="text-btn text-btn-primary"
+                id="showAddListModalBtn"
+              >
+                + 추가하기
+              </button>
+            </div>
+            <ul class="subscr-list">
+              <li class="subscr-list-item">
+                <figure class="icon">
+                  <img src="/images/netflix-logo.png" alt="넷플릭스 아이콘" />
+                </figure>
+                <div class="desc">
+                  <span class="name">넷플릭스</span>
+                  <div class="price-wrap">
+                    <span class="price">5,500</span>
+                    <span class="won">원</span>
+                  </div>
+                </div>
+                <div class="payment-wrap">
+                  <div class="payment-due">
+                    <span class="date">04.26</span>
+                    <span class="txt">결제 예정</span>
+                  </div>
+                </div>
+              </li>
+              <li class="subscr-list-item">
+                <figure class="icon">
+                  <img src="/images/couplay-logo.png" alt="쿠팡플레이 아이콘" />
+                </figure>
+                <div class="desc">
+                  <span class="name">쿠팡플레이</span>
+                  <div class="price-wrap">
+                    <span class="price">5,000</span>
+                    <span class="won">원</span>
+                  </div>
+                </div>
+                <div class="payment-wrap">
+                  <div class="payment-due">
+                    <span class="date">04.23</span>
+                    <span class="txt">결제 예정</span>
+                  </div>
+                </div>
+              </li>
+              <li class="subscr-list-item">
+                <figure class="icon">
+                  <img src="/images/tving-logo.png" alt="티빙 아이콘" />
+                </figure>
+                <div class="desc">
+                  <span class="name">티빙</span>
+                  <div class="price-wrap">
+                    <span class="price">11,900</span>
+                    <span class="won">원</span>
+                  </div>
+                </div>
+                <div class="payment-wrap">
+                  <div class="payment-due">
+                    <span class="date">05.05</span>
+                    <span class="txt">결제 예정</span>
+                  </div>
+                </div>
+              </li>
+              <li class="subscr-list-item">
+                <figure class="icon">
+                  <img src="/images/spotify-logo.png" alt="스포티파이 아이콘" />
+                </figure>
+                <div class="desc">
+                  <span class="name">스포티파이</span>
+                  <div class="price-wrap">
+                    <span class="price">12,000</span>
+                    <span class="won">원</span>
+                  </div>
+                </div>
+                <div class="payment-wrap">
+                  <div class="sharing">
+                    <img src="/images/link.png" alt="" />
+                    계정 공유중
+                  </div>
+                  <div class="payment-due">
+                    <span class="date">04.12</span>
+                    <span class="txt">결제 예정</span>
+                  </div>
+                </div>
+              </li>
+              <li class="subscr-list-item">
+                <figure class="icon">
+                  <img src="/images/youtube-logo.png" alt="유튜브 아이콘" />
+                </figure>
+                <div class="desc">
+                  <span class="name">유튜브 프리미엄</span>
+                  <div class="price-wrap">
+                    <span class="price">13,500</span>
+                    <span class="won">원</span>
+                  </div>
+                </div>
+                <div class="payment-wrap">
+                  <div class="sharing">
+                    <img src="/images/link.png" alt="" />
+                    계정 공유중
+                  </div>
+                  <div class="payment-due">
+                    <span class="date">04.15</span>
+                    <span class="txt">결제 예정</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <nav class="dock-bar">
+          <div class="dock-item active">
+            <a href="/main" class="dock-link">
+              <figure class="icon">
+                <img src="/images/home-fill.svg" alt="" />
+              </figure>
+              <span class="text">홈</span>
+            </a>
+          </div>
+          <div class="dock-item">
+            <a href="/mySubscription" class="dock-link">
+              <figure class="icon">
+                <img src="/images/stack-line.svg" alt="" />
+              </figure>
+              <span class="text">내 구독</span>
+            </a>
+          </div>
+          <div class="dock-item">
+            <a href="/charts" class="dock-link">
+              <figure class="icon">
+                <img src="/images/list-ordered.svg" alt="" />
+              </figure>
+              <span class="text">플랫폼 순위</span>
+            </a>
+          </div>
+          <div class="dock-item">
+            <a href="/charts" class="dock-link">
+              <figure class="icon">
+                <img src="/images/group-line.svg" alt="" />
+              </figure>
+              <span class="text">계정 공유</span>
+            </a>
+          </div>
+          <div class="dock-item">
+            <a href="/charts" class="dock-link">
+              <figure class="icon">
+                <img src="/images/settings-line.svg" alt="" />
+              </figure>
+              <span class="text">설정</span>
+            </a>
+          </div>
+        </nav>
+      </section>
+    </div>
+  </body>
+</html>
